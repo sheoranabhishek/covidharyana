@@ -858,8 +858,12 @@ var BarsChart = (function () {
 
 			districts.push("Jhajjar");
 			confirmed.push(data.Haryana.districtData.Jhajjar.confirmed);
+			districts.push("Nuh");
+			confirmed.push(data.Haryana.districtData.Nuh.confirmed);
 			districts.push("Panchkula");
 			confirmed.push(data.Haryana.districtData.Panchkula.confirmed);
+			districts.push("Jind");
+			confirmed.push(data.Haryana.districtData.Jind.confirmed);
 			districts.push("Rohtak");
 			confirmed.push(data.Haryana.districtData.Rohtak.confirmed);
 
