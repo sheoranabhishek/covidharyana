@@ -849,24 +849,30 @@ var BarsChart = (function () {
 
 		$.getJSON(url, function (data) {
 
-			console.log(data.Haryana.districtData);
-			districts.push("Gurugram");
-			confirmed.push(data.Haryana.districtData.Gurugram.confirmed);
-			districts.push("Faridabad");
-			confirmed.push(data.Haryana.districtData.Faridabad.confirmed);
-			districts.push("Sonipat");
-			confirmed.push(data.Haryana.districtData.Sonipat.confirmed);
-			districts.push("Jhajjar");
-			confirmed.push(data.Haryana.districtData.Jhajjar.confirmed);
-			districts.push("Nuh");
-			confirmed.push(data.Haryana.districtData.Nuh.confirmed);
-			districts.push("Panchkula");
-			confirmed.push(data.Haryana.districtData.Panchkula.confirmed);
-			districts.push("Jind");
-			confirmed.push(data.Haryana.districtData.Jind.confirmed);
-			districts.push("Rohtak");
-			confirmed.push(data.Haryana.districtData.Rohtak.confirmed);
+			//console.log(data.Haryana.districtData);
+			var array = [];
+			for (var key in data.Haryana.districtData) {
+				array.push({
+					name: key,
+					confirmed: data.Haryana.districtData[key].confirmed
+				});
+			}
 
+			var sorted = array.sort(function (a, b) {
+				return (a.confirmed < b.confirmed) ? 1 : ((b.confirmed < a.confirmed) ? -1 : 0)
+			});
+
+			array.sort();
+			var sorted = array.slice(0, 7);
+
+
+			var districts = [];
+			var confirmed = [];
+
+			for (var key of sorted) {
+				districts.push(key.name);
+				confirmed.push(key.confirmed);
+			}
 
 
 			var ordersChart = new Chart($chart, {
