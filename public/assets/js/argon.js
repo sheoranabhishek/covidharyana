@@ -849,13 +849,13 @@ var BarsChart = (function () {
 
 		$.getJSON(url, function (data) {
 
+			console.log(data.Haryana.districtData);
 			districts.push("Gurugram");
 			confirmed.push(data.Haryana.districtData.Gurugram.confirmed);
-			districts.push("Sonipat");
-			confirmed.push(data.Haryana.districtData.Sonipat.confirmed);
 			districts.push("Faridabad");
 			confirmed.push(data.Haryana.districtData.Faridabad.confirmed);
-
+			districts.push("Sonipat");
+			confirmed.push(data.Haryana.districtData.Sonipat.confirmed);
 			districts.push("Jhajjar");
 			confirmed.push(data.Haryana.districtData.Jhajjar.confirmed);
 			districts.push("Nuh");

@@ -101,8 +101,9 @@
 
                             <div class="counter ml-4">
                                 <h5>You are visitor number </h3>
-                                    <a href="https://www.hitwebcounter.com" target="_blank">
-                                        <img src="https://hitwebcounter.com/counter/counter.php?page=7346569&style=0006&nbdigits=5&type=page&initCount=150"
+                                    <!-- hitwebcounter Code START -->
+                                    <a href="#" target="_blank">
+                                        <img src="https://hitwebcounter.com/counter/counter.php?page=7351158&style=0006&nbdigits=5&type=ip&initCount=690"
                                             title="Web Counter" Alt="counter free" border="0">
                                     </a>
                             </div>
@@ -195,8 +196,13 @@
                         <div class="col text-left ">
                             <a href="/district" class="btn btn-sm btn-danger">Disrict-Wise Table</a>
                         </div>
+                        <div class="col-6 text-center ">
+                            <a href="#" class="btn btn-sm btn-white">Last Updated on :
+                                <%= Data.statewise[16].lastupdatedtime %> | <%= Data.statewise[16].statecode  %> </a>
+                        </div>
                         <div class="col text-right ">
-                            <a href="http:\\www.saralharyana.gov.in" class="btn btn-sm btn-success">Get Movement e-Pass</a>
+                            <a href="http:\\www.saralharyana.gov.in" class="btn btn-sm btn-success">Get Movement
+                                e-Pass</a>
                         </div>
                     </div>
 
@@ -210,8 +216,10 @@
                                         <div class="col">
                                             <h5 class="card-title text-uppercase text-muted mb-0">Total Cases In Haryana
                                             </h5>
-                                            <span class="h2 font-weight-bold mb-0"><%= Data.statewise[15].confirmed  %>
+                                            <span class="h2 font-weight-bold mb-0"><%= Data.statewise[16].confirmed  %>
                                             </span>
+
+
                                         </div>
                                         <div class="col-auto">
                                             <div
@@ -222,7 +230,7 @@
                                     </div>
                                     <p class="mt-3 mb-0 text-sm">
                                         <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>
-                                            <%= Data.statewise[15].active  %> </span>
+                                            <%= Data.statewise[16].active  %> </span>
                                         <span class="text-nowrap">Currently Active</span>
                                     </p>
                                 </div>
@@ -236,7 +244,7 @@
                                         <div class="col">
                                             <h5 class="card-title text-uppercase text-muted mb-0">Total Deaths in
                                                 Haryana</h5>
-                                            <span class="h2 font-weight-bold mb-0"><%= Data.statewise[15].deaths %>
+                                            <span class="h2 font-weight-bold mb-0"><%= Data.statewise[16].deaths %>
                                             </span>
                                         </div>
                                         <div class="col-auto">
@@ -248,7 +256,7 @@
                                     </div>
                                     <p class="mt-3 mb-0 text-sm">
                                         <span class="text-success mr-2"><i class="fa fa-arrow-up"></i>
-                                            <%= Data.statewise[15].recovered  %> </span>
+                                            <%= Data.statewise[16].recovered  %> </span>
                                         <span class="text-nowrap">Recovered</span>
                                     </p>
                                 </div>
